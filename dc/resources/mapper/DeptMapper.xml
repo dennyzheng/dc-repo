@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 命名空间可以任选命名，但最好要定义一定规则，便于后继的使用 -->
+<mapper namespace="com.hx.dc.dao.DeptMapper">
+    <resultMap type="Dept" id="DeptResultMap">
+        <id column="dept_id" property="deptId" />
+        <result column="dept_name" property="deptName" />
+        <result column="dept_address" property="deptAddress" />
+    </resultMap>
+
+    <select id="select" parameterType="Integer" resultMap="DeptResultMap">
+        select dept_id,dept_name,dept_address from dept where  deptId=#{deptId}
+    </select>
+
+    <insert id="insert" parameterType="Dept">
+        insert into dept(dept_name,dept_address) values(#{deptName},#{deptAddress});
+    </insert>
+</mapper>
