@@ -21,6 +21,9 @@ public class DeptController {
     //A开发人员修改
     private String testA;
 
+    //A开发人员修改
+    private String testA2;
+
     @Resource
     private DeptService deptService;
 
