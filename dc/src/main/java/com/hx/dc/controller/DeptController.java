@@ -15,6 +15,9 @@ import javax.annotation.Resource;
 @RequestMapping("dept")
 public class DeptController {
 
+    //B开发人员修改
+    private String testB;
+
     @Resource
     private DeptService deptService;
 
